@@ -1,17 +1,18 @@
 //
-//  MKMapViewExtension.swift
+//  MapView.swift
 //  ShowMeTheBurgers
 //
-//  Created by Stanislav Kobiletski on 27.12.2019.
-//  Copyright © 2019 Stanislav Kobiletski. All rights reserved.
+//  Created by Stanislav Kobiletski on 12.01.2020.
+//  Copyright © 2020 Stanislav Kobiletski. All rights reserved.
 //
 
+//import UIKit
 import MapKit
 
-extension MKMapView {
+class MapView: MKMapView {
   
-  static func makeMapView(delegate: MKMapViewDelegate) -> MKMapView {
-    let mapView = MKMapView()
+  static func makeMapView(delegate: MKMapViewDelegate) -> MapView {
+    let mapView = MapView()
     mapView.layer.cornerRadius = 4
     mapView.delegate = delegate
     return mapView

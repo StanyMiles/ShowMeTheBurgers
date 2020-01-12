@@ -13,8 +13,8 @@ class MainViewController: UICollectionViewController {
   
   // MARK: - Views
   
-  private lazy var mapView: MKMapView = {
-    MKMapView.makeMapView(delegate: mapViewDelegate)
+  private lazy var mapView: MapView = {
+    MapView.makeMapView(delegate: mapViewDelegate)
   }()
   
   private lazy var loadingLabel: UILabel = {

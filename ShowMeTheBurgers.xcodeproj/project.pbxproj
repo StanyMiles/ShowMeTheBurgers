@@ -28,7 +28,8 @@
 		93C8110123B5B94600B05045 /* NetworkingFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8110023B5B94600B05045 /* NetworkingFacade.swift */; };
 		93C8110523B5F54F00B05045 /* PhotosAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8110423B5F54F00B05045 /* PhotosAPIResponse.swift */; };
 		93C8110723B5F5C000B05045 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8110623B5F5C000B05045 /* Photo.swift */; };
-		93EF79B923B64F8F00DE9C9F /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF79B823B64F8F00DE9C9F /* MKMapViewExtension.swift */; };
+		93D441E323CB173E00FCC878 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D441E223CB173E00FCC878 /* MapView.swift */; };
+		93D441E523CB181800FCC878 /* SecretKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D441E423CB181800FCC878 /* SecretKeys.swift */; };
 		93EF79BC23B6500700DE9C9F /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF79BB23B6500700DE9C9F /* MapViewDelegate.swift */; };
 		93EF79BE23B651BB00DE9C9F /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF79BD23B651BB00DE9C9F /* LayoutManager.swift */; };
 		93EF79C023B6543000DE9C9F /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF79BF23B6543000DE9C9F /* CollectionViewDelegate.swift */; };
@@ -64,7 +65,8 @@
 		93C8110023B5B94600B05045 /* NetworkingFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFacade.swift; sourceTree = "<group>"; };
 		93C8110423B5F54F00B05045 /* PhotosAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIResponse.swift; sourceTree = "<group>"; };
 		93C8110623B5F5C000B05045 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		93EF79B823B64F8F00DE9C9F /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
+		93D441E223CB173E00FCC878 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		93D441E423CB181800FCC878 /* SecretKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeys.swift; sourceTree = "<group>"; };
 		93EF79BB23B6500700DE9C9F /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		93EF79BD23B651BB00DE9C9F /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
 		93EF79BF23B6543000DE9C9F /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				93C810D423B45C6E00B05045 /* Assets.xcassets */,
 				93C810D923B45C6E00B05045 /* Info.plist */,
 				93EF79C123B65ABC00DE9C9F /* MockData.swift */,
+				93D441E423CB181800FCC878 /* SecretKeys.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				93C810D623B45C6E00B05045 /* LaunchScreen.storyboard */,
 				93C810D123B45C6C00B05045 /* Main.storyboard */,
 				93C810E923B480FB00B05045 /* MapHeaderView.swift */,
+				93D441E223CB173E00FCC878 /* MapView.swift */,
 				93C810F023B4B14900B05045 /* VenueCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -183,7 +187,6 @@
 		93C810EB23B481FF00B05045 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				93EF79B823B64F8F00DE9C9F /* MKMapViewExtension.swift */,
 				93EF79C323B6FEA200DE9C9F /* UILabelExtension.swift */,
 				93C810EC23B4821700B05045 /* UIViewExtension.swift */,
 				93EF79C723B7078B00DE9C9F /* UIImageExtension.swift */,
@@ -309,12 +312,12 @@
 				93EF79C423B6FEA200DE9C9F /* UILabelExtension.swift in Sources */,
 				93C810D023B45C6C00B05045 /* MainViewController.swift in Sources */,
 				93C810CC23B45C6C00B05045 /* AppDelegate.swift in Sources */,
-				93EF79B923B64F8F00DE9C9F /* MKMapViewExtension.swift in Sources */,
 				93EF79C823B7078B00DE9C9F /* UIImageExtension.swift in Sources */,
 				93EF79CD23B72FD100DE9C9F /* APISecretKeys.swift in Sources */,
 				93EF79BC23B6500700DE9C9F /* MapViewDelegate.swift in Sources */,
 				93C810ED23B4821700B05045 /* UIViewExtension.swift in Sources */,
 				93C810CE23B45C6C00B05045 /* SceneDelegate.swift in Sources */,
+				93D441E323CB173E00FCC878 /* MapView.swift in Sources */,
 				93C810FD23B4DA5500B05045 /* Coordinates.swift in Sources */,
 				93C810F923B4DA2700B05045 /* APIMainResponse.swift in Sources */,
 				93EF79CB23B709E600DE9C9F /* StoryboardInstantiable.swift in Sources */,
@@ -329,6 +332,7 @@
 				93C8110123B5B94600B05045 /* NetworkingFacade.swift in Sources */,
 				93C810F623B4D18300B05045 /* BurgerJointViewModel.swift in Sources */,
 				93C810E523B45FFD00B05045 /* Networking.swift in Sources */,
+				93D441E523CB181800FCC878 /* SecretKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

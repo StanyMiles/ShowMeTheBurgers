@@ -52,15 +52,16 @@ struct Networking {
     completion: @escaping (Result<[Venue], Error>) -> Void
   ) -> URLSessionDataTask? {
     
-    let urlString = mainAPIBaseUrl + UrlPath.search
+    let urlString = "\(mainAPIBaseUrl)\(UrlPath.search)"
     
     var components = URLComponents(string: urlString)
-    let queryItems = [
+    var queryItems = [
       URLQueryItem(name: QueryItemName.near, value: location),
       URLQueryItem(name: QueryItemName.categoryId, value: categoryId),
       URLQueryItem(name: QueryItemName.intent, value: intent),
     ]
-    components?.queryItems = baseQueryItems + queryItems
+    queryItems.append(contentsOf: baseQueryItems)
+    components?.queryItems = queryItems
     
     guard let url = components?.url else {
       completion(.failure(.damagedURL))
@@ -106,10 +107,10 @@ struct Networking {
     completion: @escaping (Result<[Venue], Error>) -> Void
   ) -> URLSessionDataTask? {
     
-    let urlString = mainAPIBaseUrl + UrlPath.search
+    let urlString = "\(mainAPIBaseUrl)\(UrlPath.search)"
     
     var components = URLComponents(string: urlString)
-    let queryItems = [
+    var queryItems = [
       URLQueryItem(name: QueryItemName.radius, value: String(radius)),
       URLQueryItem(name: QueryItemName.categoryId, value: categoryId),
       URLQueryItem(name: QueryItemName.intent, value: intent),
@@ -117,7 +118,8 @@ struct Networking {
         name: QueryItemName.coordinates,
         value: "\(coordinates.latitude),\(coordinates.longitude)"),
     ]
-    components?.queryItems = baseQueryItems + queryItems
+    queryItems.append(contentsOf: baseQueryItems)
+    components?.queryItems = queryItems
     
     guard let url = components?.url else {
       completion(.failure(.damagedURL))
@@ -162,14 +164,15 @@ struct Networking {
     completion: @escaping (Result<Photo, Error>) -> Void
   ) -> URLSessionDataTask? {
     
-    let urlString = mainAPIBaseUrl + venueId + UrlPath.slash + UrlPath.photos
+    let urlString = "\(mainAPIBaseUrl)\(venueId)/\(UrlPath.photos)"
     
     var components = URLComponents(string: urlString)
-    let queryItems = [
+    var queryItems = [
       URLQueryItem(name: QueryItemName.group, value: group),
       URLQueryItem(name: QueryItemName.limit, value: String(limit)),
     ]
-    components?.queryItems = baseQueryItems + queryItems
+    queryItems.append(contentsOf: baseQueryItems)
+    components?.queryItems = queryItems
     
     guard let url = components?.url else {
       completion(.failure(.damagedURL))
@@ -311,7 +314,6 @@ extension Networking {
 
 extension Networking {
   private enum UrlPath {
-    static let slash = "/"
     static let photos = "photos"
     static let search = "search"
   }
